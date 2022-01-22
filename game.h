@@ -5,10 +5,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-//ÉùÃ÷
+//å£°æ˜Žå‡½æ•°
 void InitBoard(char board[ROW][COL], int row, int col);
 void DisplayBoard(char board[ROW][COL], int row, int col);
 void PlayerMove(char board[ROW][COL], int row, int col);
 void ComputerMove(char board[ROW][COL], int row, int col);
-char Win(char board[ROW][COL], int row, int col);
-//Æ½¾Ö Q ¼ÌÐø C Íæ¼ÒÓ® * µçÄÔÓ®#
+char Win(char board[ROW][COL], int row, int col);         //å¹³å±€ Q ç»§ç»­ C çŽ©å®¶èµ¢ * ç”µè„‘èµ¢#
