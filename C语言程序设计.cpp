@@ -1,10 +1,10 @@
-// ÒªÇó£ºÑ§ÉúµÄÄ³ÃÅ¿Î³ÌµÄĞÅÏ¢°üÀ¨ĞÕÃû(²»³¬¹ı10¸ö×Ö·û)£¬Ñ§ºÅ(²»³¬¹ı8¸ö×Ö·û)£¬Æ½Ê±³É¼¨£¬ÆÚÄ©¿¼ÊÔ³É¼¨£¬×Ü³É¼¨¡£ÆäÖĞ×Ü³É¼¨°´Æ½Ê±³É¼¨30%£¬
-//    ÆÚÄ©³É¼¨70%×Ô¶¯½øĞĞ¼ÆËã¡£´Ó¼üÅÌÊäÈëÒ»¸ö°à£¨È«°à×î¶à²»³¬¹ı60ÈË£©µÄÑ§ÉúĞÕÃû¡¢Ñ§ºÅ¼°³É¼¨ĞÅÏ¢£¬·Ö±ğ¼ÆËãÏÂÁĞÄÚÈİ£º
-// 1¡¢¼ÆËãÆÚÄ©×Ü³É¼¨£»
-// 2¡¢°´×Ü³É¼¨ÉıĞò¶ÔÑ§Éú½øĞĞÅÅĞò£¬²¢Êä³öÅÅĞòÖ®ºóµÄÑ§ÉúĞÅÏ¢£¬Ò»ĞĞÒ»¸öÑ§ÉúĞÅÏ¢£»
-// 3¡¢°´×Ü³É¼¨Í³¼Æ³É¼¨ÔÚÈ«°àÆ½¾ù·Ö¼°Æ½¾ù·ÖÖ®ÉÏµÄÑ§ÉúÈËÊı£¬²¢´òÓ¡Ñ§ÉúÈËÊı£¬Õ¼È«°àÑ§ÉúµÄ°Ù·Ö±È£¬ÒÔ¼°Ñ§ÉúĞÅÏ¢£¨°üÀ¨ĞÕÃû£¬Ñ§ºÅ£¬Æ½Ê±³É¼¨£¬ÆÚÄ©³É¼¨£¬×Ü³É¼¨£©£»
-// 4¡¢Í³¼Æ¸÷·ÖÊı¶ÎµÄÑ§ÉúÈËÊı¼°ËùÕ¼µÄ°Ù·Ö±È£º²»¼°¸ñ(0~59)£¬¼°¸ñ(60~69)£¬ÖĞµÈ(70~79)£¬Á¼ºÃ(80~89)£¬(90z~100)¶ÔÓÚ²»¼°¸ñµÄÑ§Éú£¬
-//    »¹ÒªÊä³ö¶ÔÓ¦µÄÑ§ÉúĞÅÏ¢£¨°üÀ¨ĞÕÃû£¬Ñ§ºÅ£¬Æ½Ê±³É¼¨£¬ÆÚÄ©³É¼¨£¬×Ü³É¼¨£©£»
+// è¦æ±‚ï¼šå­¦ç”Ÿçš„æŸé—¨è¯¾ç¨‹çš„ä¿¡æ¯åŒ…æ‹¬å§“å(ä¸è¶…è¿‡10ä¸ªå­—ç¬¦)ï¼Œå­¦å·(ä¸è¶…è¿‡8ä¸ªå­—ç¬¦)ï¼Œå¹³æ—¶æˆç»©ï¼ŒæœŸæœ«è€ƒè¯•æˆç»©ï¼Œæ€»æˆç»©ã€‚å…¶ä¸­æ€»æˆç»©æŒ‰å¹³æ—¶æˆç»©30%ï¼Œ
+//    æœŸæœ«æˆç»©70%è‡ªåŠ¨è¿›è¡Œè®¡ç®—ã€‚ä»é”®ç›˜è¾“å…¥ä¸€ä¸ªç­ï¼ˆå…¨ç­æœ€å¤šä¸è¶…è¿‡60äººï¼‰çš„å­¦ç”Ÿå§“åã€å­¦å·åŠæˆç»©ä¿¡æ¯ï¼Œåˆ†åˆ«è®¡ç®—ä¸‹åˆ—å†…å®¹ï¼š
+// 1ã€è®¡ç®—æœŸæœ«æ€»æˆç»©ï¼›
+// 2ã€æŒ‰æ€»æˆç»©å‡åºå¯¹å­¦ç”Ÿè¿›è¡Œæ’åºï¼Œå¹¶è¾“å‡ºæ’åºä¹‹åçš„å­¦ç”Ÿä¿¡æ¯ï¼Œä¸€è¡Œä¸€ä¸ªå­¦ç”Ÿä¿¡æ¯ï¼›
+// 3ã€æŒ‰æ€»æˆç»©ç»Ÿè®¡æˆç»©åœ¨å…¨ç­å¹³å‡åˆ†åŠå¹³å‡åˆ†ä¹‹ä¸Šçš„å­¦ç”Ÿäººæ•°ï¼Œå¹¶æ‰“å°å­¦ç”Ÿäººæ•°ï¼Œå å…¨ç­å­¦ç”Ÿçš„ç™¾åˆ†æ¯”ï¼Œä»¥åŠå­¦ç”Ÿä¿¡æ¯ï¼ˆåŒ…æ‹¬å§“åï¼Œå­¦å·ï¼Œå¹³æ—¶æˆç»©ï¼ŒæœŸæœ«æˆç»©ï¼Œæ€»æˆç»©ï¼‰ï¼›
+// 4ã€ç»Ÿè®¡å„åˆ†æ•°æ®µçš„å­¦ç”Ÿäººæ•°åŠæ‰€å çš„ç™¾åˆ†æ¯”ï¼šä¸åŠæ ¼(0~59)ï¼ŒåŠæ ¼(60~69)ï¼Œä¸­ç­‰(70~79)ï¼Œè‰¯å¥½(80~89)ï¼Œ(90z~100)å¯¹äºä¸åŠæ ¼çš„å­¦ç”Ÿï¼Œ
+//    è¿˜è¦è¾“å‡ºå¯¹åº”çš„å­¦ç”Ÿä¿¡æ¯ï¼ˆåŒ…æ‹¬å§“åï¼Œå­¦å·ï¼Œå¹³æ—¶æˆç»©ï¼ŒæœŸæœ«æˆç»©ï¼Œæ€»æˆç»©ï¼‰ï¼›
 
 #include <stdio.h>
 #include <string.h>
@@ -13,16 +13,16 @@
 #define MAXNAME 10
 #define MAXNUM 8
 
-struct student //¶¨Òå½á¹¹Ìå
+struct student //å®šä¹‰ç»“æ„ä½“
 {
-    char name[MAXNAME + 1]; //ĞÕÃû
-    char id[MAXNUM + 1];    //Ñ§ºÅ
-    int usual_achi;         //Æ½Ê±³É¼¨
-    int final_achi;         //ÆÚÄ©³É¼¨
-    int num_achi;           //×Ü³É¼¨
+    char name[MAXNAME + 1]; //å§“å
+    char id[MAXNUM + 1];    //å­¦å·
+    int usual_achi;         //å¹³æ—¶æˆç»©
+    int final_achi;         //æœŸæœ«æˆç»©
+    int num_achi;           //æ€»æˆç»©
 };
 
-void calculation(struct student a[], int peo); //ÉùÃ÷º¯Êı
+void calculation(struct student a[], int peo); //å£°æ˜å‡½æ•°
 void arry(struct student a[], int peo);
 void average(struct student a[], int peo);
 void statistics(struct student a[], int peo);
@@ -35,20 +35,20 @@ int main()
     int i2 = 0;
     int sum = 0;
     int peo = 60;
-    printf("ÇëÊäÈë°à¼¶ÈËÊı£º\n");
+    printf("è¯·è¾“å…¥ç­çº§äººæ•°ï¼š\n");
     scanf("%d", &peo);
-    printf("°à¼¶ÈËÊıÎª£º%d\n", peo);
+    printf("ç­çº§äººæ•°ä¸ºï¼š%d\n", peo);
     struct student a[60] =
         {
-            // {"ÕÅ¾ü", "21200000", 20, 20, 0},
-            // {"ÕÅÃÉ", "214", 40, 40, 40},
-            // {"Ğ»¿¡½Ü", "215", 100, 100, 0},
-            // {"Ö£Á¼½Ü", "2143001", 75, 75, 0}
+            // {"ç§‹ç§‹", "21200000", 20, 20, 0},
+            // {"å“å“", "214", 40, 40, 40},
+            // {"è°¢è°¢", "215", 100, 100, 0},
+            // {"å¼ å¼ ", "2143001", 75, 75, 0}
         };
     //scanf("%c,%c,%d,%d", a[3].name, a[3].id, a[3].usual_achi, a[3].final_achi);
     //loadtxet(a);
-    printf("ÇëÊäÈë£º\n");
-    printf("ĞÕÃû£º  Ñ§ºÅ£º   Æ½Ê±³É¼¨£º  ÆÚÄ©³É¼¨£º\n");
+    printf("è¯·è¾“å…¥ï¼š\n");
+    printf("å§“åï¼š  å­¦å·ï¼š   å¹³æ—¶æˆç»©ï¼š  æœŸæœ«æˆç»©ï¼š\n");
     for (lm = 0; lm < peo; lm++)
     {
         scanf("%s%s%d%d", &a[lm].name, &a[lm].id, &a[lm].usual_achi, &a[lm].final_achi);
@@ -59,29 +59,29 @@ int main()
     statistics(a, peo);
     for (i2 = 0; i2 < peo; i2++)
     {
-        //printf("%sÍ¬Ñ§,Ñ§ºÅÊÇ%s,Æ½Ê±³É¼¨Îª%d,ÆÚÄ©¿¼ÊÔ³É¼¨Îª%d,×Ü³É¼¨Îª%d\n", a[i2].name, a[i2].id, a[i2].usual_achi, a[i2].final_achi, a[i2].num_achi);
+        //printf("%såŒå­¦,å­¦å·æ˜¯%s,å¹³æ—¶æˆç»©ä¸º%d,æœŸæœ«è€ƒè¯•æˆç»©ä¸º%d,æ€»æˆç»©ä¸º%d\n", a[i2].name, a[i2].id, a[i2].usual_achi, a[i2].final_achi, a[i2].num_achi);
     }
 }
 
 void loadtext(student a[])
 {
-    FILE *sj = fopen("C:\\Users\\Ğ»¿¡½Ü\\Desktop\\sj.txt", "r"); //("D:\\data.txt","r");
+    FILE *sj = fopen("C:\\Users\\è°¢ä¿Šæ°\\Desktop\\sj.txt", "r"); //("D:\\data.txt","r");
     int in, jn, an[4][5];
     for (in = 0; in < 4; in++)
     {
         for (jn = 0; jn < 5; jn++)
         {
-            fscanf(sj, "%s%s%d%d", &a[jn].name, &a[jn].id, &a[jn].usual_achi, &a[jn].final_achi); //¶ÁÈ¡ÎÄ¼şÖĞµÄÊı¾İ£¬Óöµ½¿Õ¸ñºÍ»»ĞĞÍ£Ö¹¶Á¡£
-            printf("%s%s%d%d", &a[jn].name, &a[jn].id, &a[jn].usual_achi, &a[jn].final_achi);     //½«ÎÄ¼ş´òÓ¡³öÀ´¡£
+            fscanf(sj, "%s%s%d%d", &a[jn].name, &a[jn].id, &a[jn].usual_achi, &a[jn].final_achi); //è¯»å–æ–‡ä»¶ä¸­çš„æ•°æ®ï¼Œé‡åˆ°ç©ºæ ¼å’Œæ¢è¡Œåœæ­¢è¯»ã€‚
+            printf("%s%s%d%d", &a[jn].name, &a[jn].id, &a[jn].usual_achi, &a[jn].final_achi);     //å°†æ–‡ä»¶æ‰“å°å‡ºæ¥ã€‚
         }
         printf("\n");
     }
     fclose(sj);
 }
 
-void calculation(student a[], int peo) //µÚÒ»Ìâ
+void calculation(student a[], int peo) //ç¬¬ä¸€é¢˜
 {
-    printf("µÚÒ»Ìâ£º  ÒÑ¼ÆËã×Ü³É¼¨\n");
+    printf("ç¬¬ä¸€é¢˜ï¼š  å·²è®¡ç®—æ€»æˆç»©\n");
     int i3 = 0;
     float sum = 0;
     for (i3 = 0; i3 < peo; i3++)
@@ -91,9 +91,9 @@ void calculation(student a[], int peo) //µÚÒ»Ìâ
     }
 }
 
-void arry(student a[], int peo) //µÚ¶şÌâ Ã°ÅİÅÅĞò
+void arry(student a[], int peo) //ç¬¬äºŒé¢˜ å†’æ³¡æ’åº
 {
-    printf("µÚ¶şÌâ£º\n");
+    printf("ç¬¬äºŒé¢˜ï¼š\n");
     int i6 = 0;
     int i, j, usual, final;
     struct student b[1];
@@ -111,13 +111,13 @@ void arry(student a[], int peo) //µÚ¶şÌâ Ã°ÅİÅÅĞò
     }
     for (i6 = 0; i6 < peo; i6++)
     {
-        printf("%sÍ¬Ñ§,Ñ§ºÅÊÇ%s,Æ½Ê±³É¼¨Îª%d,ÆÚÄ©¿¼ÊÔ³É¼¨Îª%d,×Ü³É¼¨Îª%d\n", a[i6].name, a[i6].id, a[i6].usual_achi, a[i6].final_achi, a[i6].num_achi);
+        printf("%såŒå­¦,å­¦å·æ˜¯%s,å¹³æ—¶æˆç»©ä¸º%d,æœŸæœ«è€ƒè¯•æˆç»©ä¸º%d,æ€»æˆç»©ä¸º%d\n", a[i6].name, a[i6].id, a[i6].usual_achi, a[i6].final_achi, a[i6].num_achi);
     }
 }
 
 void average(student a[], int peo)
 {
-    printf("µÚÈıÌâ£º\n");
+    printf("ç¬¬ä¸‰é¢˜ï¼š\n");
     int i4 = 0;
     int i5 = 0;
     int ave = 0;
@@ -134,37 +134,37 @@ void average(student a[], int peo)
         if (a[i5].num_achi > ave)
         {
             sum++;
-            //printf("%sÍ¬Ñ§,Ñ§ºÅÊÇ%s,Æ½Ê±³É¼¨Îª%d,ÆÚÄ©¿¼ÊÔ³É¼¨Îª%d,×Ü³É¼¨Îª%d\n", a[i5].name, a[i5].id, a[i5].usual_achi, a[i5].final_achi, a[i5].num_achi);
+            //printf("%såŒå­¦,å­¦å·æ˜¯%s,å¹³æ—¶æˆç»©ä¸º%d,æœŸæœ«è€ƒè¯•æˆç»©ä¸º%d,æ€»æˆç»©ä¸º%d\n", a[i5].name, a[i5].id, a[i5].usual_achi, a[i5].final_achi, a[i5].num_achi);
         }
     }
-    //printf("×ÜÊıÊÇ%d\n", num);
-    //printf("Æ½¾ùÊı%d\n", ave);
-    printf("ÓĞ%dÎ»Í¬Ñ§µÄ·ÖÊı¸ßÓÚ°à¼¶Æ½¾ù·Ö,ËûÃÇÊÇ£º\n", sum);
+    //printf("æ€»æ•°æ˜¯%d\n", num);
+    //printf("å¹³å‡æ•°%d\n", ave);
+    printf("æœ‰%dä½åŒå­¦çš„åˆ†æ•°é«˜äºç­çº§å¹³å‡åˆ†,ä»–ä»¬æ˜¯ï¼š\n", sum);
     for (i5 = 0; i5 < peo; i5++)
     {
         if (a[i5].num_achi > ave)
         {
             //sum++;
-            printf("%sÍ¬Ñ§,Ñ§ºÅÊÇ%s,Æ½Ê±³É¼¨Îª%d,ÆÚÄ©¿¼ÊÔ³É¼¨Îª%d,×Ü³É¼¨Îª%d\n", a[i5].name, a[i5].id, a[i5].usual_achi, a[i5].final_achi, a[i5].num_achi);
+            printf("%såŒå­¦,å­¦å·æ˜¯%s,å¹³æ—¶æˆç»©ä¸º%d,æœŸæœ«è€ƒè¯•æˆç»©ä¸º%d,æ€»æˆç»©ä¸º%d\n", a[i5].name, a[i5].id, a[i5].usual_achi, a[i5].final_achi, a[i5].num_achi);
         }
     }
 }
 
 void statistics(student a[], int peo)
 {
-    printf("µÚËÄÌâ£º\n");
+    printf("ç¬¬å››é¢˜ï¼š\n");
     int i7 = 0;
-    int f1 = 0;   //²»¼°¸ñÈËÊı
-    int f2 = 0;   //¼°¸ñÈËÊı
-    int f3 = 0;   //ÖĞµÈÈËÊı
-    int f4 = 0;   //Á¼ºÃÈËÊı
-    int f5 = 0;   //ÓÅĞãÈËÊı
-    float d1 = 0; //²»¼°¸ñ±ÈÀı
-    float d2 = 0; //¼°¸ñ±ÈÀı
-    float d3 = 0; //ÖĞµÈ±ÈÀı
-    float d4 = 0; //Á¼ºÃ±ÈÀı
-    float d5 = 0; //ÓÅĞã±ÈÀı
-    int sum = 4;  //×ÜÊı
+    int f1 = 0;   //ä¸åŠæ ¼äººæ•°
+    int f2 = 0;   //åŠæ ¼äººæ•°
+    int f3 = 0;   //ä¸­ç­‰äººæ•°
+    int f4 = 0;   //è‰¯å¥½äººæ•°
+    int f5 = 0;   //ä¼˜ç§€äººæ•°
+    float d1 = 0; //ä¸åŠæ ¼æ¯”ä¾‹
+    float d2 = 0; //åŠæ ¼æ¯”ä¾‹
+    float d3 = 0; //ä¸­ç­‰æ¯”ä¾‹
+    float d4 = 0; //è‰¯å¥½æ¯”ä¾‹
+    float d5 = 0; //ä¼˜ç§€æ¯”ä¾‹
+    int sum = 4;  //æ€»æ•°
     for (i7 = 0; i7 < peo; i7++)
     {
         int n = a[i7].num_achi;
@@ -172,28 +172,28 @@ void statistics(student a[], int peo)
         if (n < 60 && n >= 0)
         {
             f1++;
-            printf("²»¼°¸ñµÄÊÇ%sÍ¬Ñ§,Ñ§ºÅÊÇ%s,Æ½Ê±³É¼¨Îª%d,ÆÚÄ©¿¼ÊÔ³É¼¨Îª%d,×Ü³É¼¨Îª%d\n", a[i7].name, a[i7].id, a[i7].usual_achi, a[i7].final_achi, a[i7].num_achi);
-            //printf("²»¼°¸ñ");
+            printf("ä¸åŠæ ¼çš„æ˜¯%såŒå­¦,å­¦å·æ˜¯%s,å¹³æ—¶æˆç»©ä¸º%d,æœŸæœ«è€ƒè¯•æˆç»©ä¸º%d,æ€»æˆç»©ä¸º%d\n", a[i7].name, a[i7].id, a[i7].usual_achi, a[i7].final_achi, a[i7].num_achi);
+            //printf("ä¸åŠæ ¼");
         }
         else if (n < 70 && n >= 60)
         {
             f2++;
-            //printf("¼°¸ñ");
+            //printf("åŠæ ¼");
         }
         else if (n < 80 && n >= 70)
         {
             f3++;
-            //printf("ÖĞµÈ");
+            //printf("ä¸­ç­‰");
         }
         else if (n < 90 && n >= 80)
         {
             f4++;
-            //printf("Á¼ºÃ");
+            //printf("è‰¯å¥½");
         }
         else
         {
             f5++;
-            //printf("ÓÅĞã");
+            //printf("ä¼˜ç§€");
         }
     }
     d1 = f1 * 100 / peo;
@@ -201,9 +201,9 @@ void statistics(student a[], int peo)
     d3 = f3 * 100 / peo;
     d4 = f4 * 100 / peo;
     d5 = f5 * 100 / peo;
-    printf("²»¼°¸ñµÄÈËÊıÕ¼%%%f\n", d1);
-    printf("¼°¸ñµÄÈËÊıÕ¼%%%f\n", d2);
-    printf("ÖĞµÈµÄÈËÊıÕ¼%%%f\n", d3);
-    printf("Á¼ºÃµÄÈËÊıÕ¼%%%f\n", d4);
-    printf("ÓÅĞãµÄÈËÊıÕ¼%%%f\n", d5);
+    printf("ä¸åŠæ ¼çš„äººæ•°å %%%f\n", d1);
+    printf("åŠæ ¼çš„äººæ•°å %%%f\n", d2);
+    printf("ä¸­ç­‰çš„äººæ•°å %%%f\n", d3);
+    printf("è‰¯å¥½çš„äººæ•°å %%%f\n", d4);
+    printf("ä¼˜ç§€çš„äººæ•°å %%%f\n", d5);
 }
